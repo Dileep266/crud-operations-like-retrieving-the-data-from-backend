@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      div>th {
+            flex-direction: row;
+            justify-content: left;
+            
+            
+            
+          }
+        body
+        {
+            background-color: bisque;
+        }
+    </style>
+    <center>
+
+        <h1>Webpage</h1>
+       <table border="3px">
+        <div>
+        
+        <th>pk</th>
+        <th>topic_name</th>
+        <th>name</th>
+        <th>url</th>
+        <th>email</th>
+        </div>
+   
+       {% for web in WLTO %}
+       <tr>
+        <td>{{web.pk}}</td>
+        <td>{{web.topic_name}}</td>
+        <td>{{web.name}}</td>
+        <td>{{web.url}}</td>
+        <td>{{web.email}}</td>
+       </tr>
+       {% endfor %}
+  
+    </table>
+    </center>
+</body>
+</html>
